@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palabras</title>
+</head>
+<body>
+    <h1>Lista de palabras</h1>
+
+<!-- Se agrega id que mostrará la lista generada.-->
+    <ul id="myList"></ul>
+
+<!-- Se agrega un input para escribir la palabra que se enviará como parámetro.-->
+    <input type="text" id="inputString">
+
+ <!-- Se agrega un input para escribir la palabra que se enviará como parámetro.-->
+    <button id="submitButton">Mostrar resultados</button>
+    <script>
+      const submitButton = document.getElementById('submitButton');
+      submitButton.addEventListener('click', function() {
+        const inputString = document.getElementById('inputString').value;
+        const resultArray = obtenerMayorLongitud(inputString, myArray);
+        printArray(resultArray);
+      });
+    </script>
+    
+
+
+
+<!-- Conectamos nuestro archivo JS.-->
+    <script src="./app.js"></script>
+</body>
+</html>
